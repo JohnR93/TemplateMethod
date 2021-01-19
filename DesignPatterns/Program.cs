@@ -14,11 +14,11 @@ namespace DesignPatterns
            orcamento.AdicionarItem(new Item("Geladeira", 500));
            orcamento.AdicionarItem(new Item("Fogão", 500));
            orcamento.AdicionarItem(new Item("Microondas", 500));
-           orcamento.AdicionarItem(new Item("xBox", 500));
+           orcamento.AdicionarItem(new Item("Xbox", 500));
 
-
-           double desconto = cauculador.Calcula(orcamento);
-           System.Console.WriteLine(desconto);
+            CalculadorDeImposto calculador = new CalculadorDeImposto();
+            double imposto = calculador.RealizaCalculo(orcamento, new IHIT());
+            System.Console.WriteLine(imposto);
 
         }
     }

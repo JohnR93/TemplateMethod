@@ -6,10 +6,10 @@ namespace DesignPatterns
 {
     class CalculadorDeImposto
     {
-        public void RealizaCalculo(Orcamento orcamento, Imposto imposto)
+        public double RealizaCalculo(Orcamento orcamento, Imposto imposto)
         {
             double res = imposto.Calcula(orcamento);
-            System.Console.WriteLine(res);
+            return res;
         }
             
     }
